@@ -1,0 +1,68 @@
+.DropDown {
+    width: 198px; /* 200 with border */
+    height: 38px; /* 40 with border */
+    border-radius: 20px;
+    border-top: solid 1px #101010;
+    /*
+    border-left: solid 1px #101010;
+    border-bottom: solid 1px #101010;
+    border-right: solid 1px #101010;
+    */
+}
+
+.DropDown h3 {
+    font-size: 24px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.DropDown .selected_item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.DropDown .drop_down_icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    background-image: url(../img/drop_down_arrow_dark.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.DropDown ul {
+    position: relative;
+    top: -39px; /* becuse of border-width 1px : 40-1=39*/
+    padding-top: 39px; /* to compensate top */
+    border-radius: 20px;
+    border-left: solid 1px #101010;
+    border-bottom: solid 1px #101010;
+    border-right: solid 1px #101010;
+
+    overflow: hidden;
+    height: 0;
+    z-index: 1;
+    /* height: fit-content; */
+}
+
+.DropDown ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.DropDown ul li:first-child h3 {
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.DropDown ul li h3 {
+    width: fit-content;
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,27 @@
+.Switch {
+    height: 30px;
+    width: 60px;
+    display: block;
+}
+
+.slider {
+    height: 18px; /*20 with border*/
+    width:  58px; /*60 with border*/
+    margin-top: 5px;
+    border-radius: 10px;
+    border: #101010 solid 1px;
+    background-color: #fcfcfc;
+    cursor: pointer;
+}
+
+.knob {
+    height: 30px;
+    width: 30px;
+    background-color: #101010;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    /* left: 30px; */
+    cursor: pointer;
+    transition: ease-out 50ms;
+}
