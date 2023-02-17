@@ -34,6 +34,7 @@
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: 100ms ease-in-out;
 }
 
 .DropDown ul {

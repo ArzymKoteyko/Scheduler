@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/drop_down.css"
 
-type Props = { }
+type Props = { onItemSelected }
 type State = { is_open, selected_item_name }
 export class DropDown extends React.Component<Props, State> {
     constructor (props) {
@@ -13,17 +13,16 @@ export class DropDown extends React.Component<Props, State> {
     }
 
     handleDropClick = (event) => {
-        console.log(event)
         this.setState({
             is_open: this.state.is_open ? false : true,
         })
     }
 
     handleSelectClick = (event) => {
-        console.log(event)
         this.setState({
             selected_item_name: event.target.innerHTML
         })
+        this.props.onItemSelected({item_name: event.target.innerHTML})
     }
 
 
@@ -48,7 +47,7 @@ export class DropDown extends React.Component<Props, State> {
                 <li><h3 onClick={this.handleSelectClick}>home</h3></li>
                 <li><h3 onClick={this.handleSelectClick}>about</h3></li>
                 <li><h3 onClick={this.handleSelectClick}>gallery</h3></li>
-                <li><h3 onClick={this.handleSelectClick}>sing up</h3></li>
+                <li><h3 onClick={this.handleSelectClick}>sign up</h3></li>
                 <li><h3 onClick={this.handleSelectClick}>roulette</h3></li>
             </ul>
         </div>
