@@ -12,6 +12,13 @@ export class About extends React.Component<Props, State> {
     }   
 
     render() { return (<>
-        <h3>About</h3>
+        <div className="About">
+            <div className="simple_contanier">
+                <h3>creator: Artem Kotenko</h3>
+                <h3>version: 1.0</h3>
+                <h3>github: <a href="https://github.com/ArzymKoteyko">ArzymKoteyko</a></h3>
+                <h3>licence: <a href="http://www.openbsd.org/policy.html">BSD 3-Clause License</a></h3>
+            </div>
+        </div>
     </>)}
 }

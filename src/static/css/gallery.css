@@ -22,7 +22,7 @@
 }
 
 .Gallery .grid_contanier div:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
     filter: drop-shadow(5px 5px 8px rgba(34, 60, 80, 0.3));
 }
 
