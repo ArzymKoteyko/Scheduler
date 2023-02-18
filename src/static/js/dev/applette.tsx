@@ -14,7 +14,8 @@ export class Applette extends React.Component<Props, State> {
 
     render () {return(<>
         <div className="Applette">
-
+            <h1>Hello Web</h1>
+            <h2>made by Artem Kotenko</h2>
         </div>
     </>)}
 }

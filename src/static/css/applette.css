@@ -5,3 +5,16 @@
     border-radius: 20px;
     overflow: hidden;
 }
+
+
+h1 {
+    font-size: 52px;
+    font-weight: 500;
+    margin: 175px 0 0 100px;
+}
+
+h2 {
+    font-size:  36px;
+    font-weight: 300;
+    margin-left: 100px;
+}
