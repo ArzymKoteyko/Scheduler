@@ -54,12 +54,10 @@ assistant.on('data', (command) => {
 
 
 
-import { YourComponentName } from './your_component_name';
 
 import { App } from './app';
 
 const root = createRoot(document.getElementById('root'))
-
 
 root.render(
     <App/>
