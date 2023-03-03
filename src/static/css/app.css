@@ -1,0 +1,19 @@
+.App .app_contanier {
+    width: 100vw;
+    height: 100vh;
+    background: 
+        linear-gradient(336.84deg, rgba(20, 116, 70, 0.6) 17.57%, rgba(8, 8, 8, 0) 64.88%), 
+        radial-gradient(100% 100% at 75.89% 100%, rgba(0, 133, 255, 0.24) 0%, rgba(0, 71, 255, 0.03) 100%), 
+        linear-gradient(180deg, rgba(8, 8, 8, 0) 50%, rgba(7, 71, 33, 0.3) 100%), 
+        linear-gradient(270deg, #061621 0%, rgba(8, 8, 8, 0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    background-color: #080808;
+}
+

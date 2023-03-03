@@ -1,0 +1,32 @@
+.ScrollBox {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    overflow: scroll;
+}
+
+.ScrollBox > div {
+    width: 200px;
+    height: 800px;
+    overflow: hidden;
+}
+
+.ScrollBox .content {
+    background-color: yellow;
+}
+
+.ScrollBox .content2 {
+    background-color: blue;
+}
+
+.ScrollBox .content3 {
+    background-color: red;
+}
+
+.ScrollBox .content4 {
+    background-color: green ;
+}
+
+.ScrollBox .content5 {
+    background-color: orange;
+}

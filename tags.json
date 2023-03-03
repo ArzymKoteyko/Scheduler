@@ -1,0 +1,5 @@
+{
+    "work": {"name": "work", "color": "yellow"},
+    "study": {"name": "study", "color": "red"},
+    "rest": {"name": "rest", "color": "blue"}
+}

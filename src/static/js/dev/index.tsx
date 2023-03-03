@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 import "../../css/index.css"
 
 // Функция createSmartappDebugger используется в development среде. В production среде необходимо использовать createAssistant.
+
 /*
 import { createAssistant, createSmartappDebugger } from '@sberdevices/assistant-client';
 
@@ -12,7 +13,7 @@ const initialize = (getState, getRecoveryState) => {
     if (process.env.NODE_ENV === 'development') {
         return createSmartappDebugger({
             // Токен из Кабинета разработчика
-            token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZjAwMTAzMGFkMTNmMGE0NmRmMjRhNTgxZDk5MzBmMGZkZmZmN2U3NmM0NTkzODBlYzk0Yzc3MDQyYWU1ZjZmMDFlYmMiLCJhdWQiOiJWUFMiLCJleHAiOjE2NzY3MDU4ODYsImlhdCI6MTY3NjYxOTQ3NiwiaXNzIjoiS0VZTUFTVEVSIiwidHlwZSI6IkJlYXJlciIsImp0aSI6IjAyOGYzNWQ0LTFlODAtNDA0Mi05MTczLTk1NjlkNmRiYmIxNSIsInNpZCI6ImVmZWRhMjJjLTFjMjYtNDY3Ni04MWZkLTE4NTk5MGYzNTc4YyJ9.AyS0vE9oIsrlQuIVJeg3ZqNcBsMwAekSKbEyX_d5zYxXFa2ABHXn4kX_xoLGLJntN-6IMoEGK8Soyd6Pmn2Nbu1Ghr-2bJY5E4deo-qXJ-k8Y0vkMVBSOqcCTGLvJzpAekDp9_k2RkNJW3sPdQgl0iS7k5RjA0IAuyYHacWpfvXgL--oADCiuY4Q8is2Ah-l3w9UlJl39AQNUWIFPwav8UOt2DdTc98SanKdHegPrwbcwsfO23C_c2GSSxpXVFkOlbG0dSGNdd451QFC5LrCO7pySsSSfy7OiIMvc0R_HWNgI5c7IPmVpf3fxFAgIdpL5aBovDtjNZDBSusINAayMm8Sv58tXgxonKQDsfnX7IN9CJdiNzAEE6IVdD6XOKikyHZoGgNvYDmEl5Kh4WYD-wSVddGTy3HBdRLE38JUeZpV-a4teRv1nO182tYSQwicbwCjAQHo0gA91vAOgxTsSNDUmGaJNrAjJGG9bfD6JGBaJTfuKG21cxRhzLBgwOPpCIeCahxtJhzc_O5Y8H2RdxaFlQkds3jnHNivBf-EJtha2zyYABUMm5hxxnU8fA_8A2mYfH9l3_U85HqQshy0TfXCN0ATxvy9KZZtcTYjJKujtTHZeRVo-KXEjwwT30Ad7gDdnvXP3-hREXl3kcdcRRhZtHDhGoibpAM82Teg8oc",
+            token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZjAwMTAzMGFkMTNmMGE0NmRmMjRhNTgxZDk5MzBmMGZkZmZmN2U3NmM0NTkzODBlYzk0Yzc3MDQyYWU1ZjZmMDFlYmMiLCJhdWQiOiJWUFMiLCJleHAiOjE2NzczMzIzNzMsImlhdCI6MTY3NzI0NTk2MywiaXNzIjoiS0VZTUFTVEVSIiwidHlwZSI6IkJlYXJlciIsImp0aSI6ImQzZTMxM2YyLTUxZDUtNGYyMi04N2FlLTcyMzBhOWE3YjhiYiIsInNpZCI6Ijc0YmZhNDNiLWM1YjEtNDk2Yi1iOTdhLWJlMDJlYmNkZDNmMyJ9.DUKv8dD4VMhB7g79NUAsuRv2N4KjejLm8rAgzwoum_Ogc0QV0POS__pML9e1-7FMjMKUqcdb139BR8iYgWzNegxLHAf2rH4jZoioF1OaQjBEhgtII8Be84cp536Je089XIh_e-xdQYD8Yl9CW6XaNnQuciE0CXoacm9zUAd8MkOYm9dd70ZrGIvV_B99ge-uBttdMqYz-titliz4pQDgdfq8JzD9_KViTlfCDN3asW07KumCVXXEP_iiCJ9KdxSPXxjPNOQo1-wPGjk-unUsPsCKFKQtrsv7xXT56N0avvZcZM0QRxNpNJ0U7smERb77P6V27yznUbJ2DZXy6RDFikgVWYM-BMI8GrR18UrTyEK-AZYWeOQL-5AjCJH-gSbURDDVwQu6PksI9hsi8xLH2QgRPiv7Q0E20PqFHqlEUFtn8ljsB5vbsYeTPxKJg8btGbhP4UeXIHzyM3ygjhp_AjuG1q46sDM3z-vqzhVaNHs7iF8Cg8K6VrLiyireO9Kkn4wxoIFEFdvICEGtE_UpX_5Z9fSjfm3XGmVbZSauvP17CEi1fOZbIftuUNkuwyivcESfiEo1dmBJDs0A8XxjhnuEApPKYjl56DRGlkdN-jtmZ8noaJvsMt21cHZ1f5TOPEGEbZzhOmpCMn6JLFZTBz_16_hQtgNg2H9uOGVKTGY",
             // Пример фразы для запуска смартапа
             initPhrase: 'Хочу попкорн',
             // Текущее состояние смартапа
@@ -54,7 +55,6 @@ assistant.on('data', (command) => {
 
 
 
-import { YourComponentName } from './your_component_name';
 
 import { App } from './app';
 
